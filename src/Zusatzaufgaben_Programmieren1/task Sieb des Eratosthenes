@@ -1,6 +1,5 @@
-Will man Primzahlen bis zu einer bestimmten Obergrenze ermitteln, dann man dazu das sog. Sieb
-des Eratosthenes verwenden. Nehmen Sie die notwendigen Schritte zuerst auf einem Blatt Papier
-vor. Dieser Algorithmus lautet folgendermaßen:
+Will man Primzahlen bis zu einer bestimmten Obergrenze ermitteln, kann man dazu das sog. Sieb
+des Eratosthenes verwenden. Dieser Algorithmus lautet folgendermaßen:
 1. Man schreibt die Zahlen bis zur Obergrenze (im Beispiel N=20 auf).
 Danach werden alle Zahlen ‚ausgesiebt‘, die durch eine andere Zahl als 1 oder durch sich
 selbst teilbar sind. Alle Zahlen, die übrig bleiben, sind Primzahlen.
