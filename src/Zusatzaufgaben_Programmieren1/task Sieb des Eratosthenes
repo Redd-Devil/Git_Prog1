@@ -1,0 +1,34 @@
+Will man Primzahlen bis zu einer bestimmten Obergrenze ermitteln, dann man dazu das sog. Sieb
+des Eratosthenes verwenden. Nehmen Sie die notwendigen Schritte zuerst auf einem Blatt Papier
+vor. Dieser Algorithmus lautet folgendermaßen:
+1. Man schreibt die Zahlen bis zur Obergrenze (im Beispiel N=20 auf).
+Danach werden alle Zahlen ‚ausgesiebt‘, die durch eine andere Zahl als 1 oder durch sich
+selbst teilbar sind. Alle Zahlen, die übrig bleiben, sind Primzahlen.
+2. Die Zahl 1 kann gestrichen werden, da sie per Definition keine Primzahl ist.
+3. Im nächsten Schritt kommt man zur Zahl 2. Die Zahl 2 ist Primzahl (und bleibt übrig). Alle
+Vielfachen von 2 sind durch 2 teilbar und können demnach keine Primzahlen sein. Deshalb
+werden alle Vielfachen der 2 gestrichen.
+4. Im nächsten Schritt kommt man zur Zahl 3. Die Zahl 3 ist Primzahl (und bleibt übrig). Alle
+Vielfachen von 3 sind durch 3 teilbar und können demnach keine Primzahlen sein. Deshalb
+werden alle Vielfachen der 3 gestrichen.
+5. Im nächsten Schritt kommt man zur Zahl 4. Die 4 ist bereits gestrichen und kann daher
+einfach übersprungen werden.
+6. Da mindestens ein Primfaktor einer zusammengesetzten Zahl immer kleiner gleich der
+Wurzel der Zahl sein muss, ist es ausreichend, nur die Vielfachen jener Primzahlen zu
+streichen, die kleiner oder gleich der Wurzel der Schranke N sind ( √20 ≈ 4,472). An dieser
+Stelle ist alles ‚gesiebt‘. Alle verbleibenden Zahlen sind Primzahlen.
+
+Implementieren Sie das Sieb des Eratosthenes in Java. Gehen Sie dazu in folgenden Schritten vor:
+a) Schreiben Sie eine Methode fillArray, die als Parameter eine Obergrenze entgegen nimmt
+und ein mit natürlichen Zahlen gefülltes Array bis zur gewünschten Obergrenze zurück gibt.
+b) Schreiben Sie eine Methode sieve, die als Parameter ein Array mit natürlichen Zahlen
+entgegennimmt und die ‚Nicht-Primzahlen‘ nach dem oben beschriebenen Algorithmus
+‚aussiebt‘. Nutzen Sie zur Markierung der ‚Nicht-Primzahlen‘ die -1 (Beispiel: array[0] = -1;).
+c) Schreiben Sie eine Methode showContent, die als Parameter ein ‚gesiebtes‘ Array
+entgegennimmt und folgende Ausgabe in der Konsole generiert:
+0 is not a prime number.
+1 is not a prime number.
+2 is a prime number.
+3 is a prime number.
+4 is not a prime number.
+…
