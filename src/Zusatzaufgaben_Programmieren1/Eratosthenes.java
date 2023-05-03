@@ -1,13 +1,13 @@
 package Zusatzaufgaben_Programmieren1;            // Meine Lösung
-
+                                                  // Alle statischen Methoden kennen static int oberGrenze
 import java.util.Scanner;
 
 public class Eratosthenes {
 
-        public static int oberGrenze;
+    static int oberGrenze;
 
     //a
-    public static int[] fillArray(int oberGrenze) {
+    public static int[] fillArray() {         // muss deshalb nicht ... fillArray(int oberGrenze) schreiben
         int[] arg1 = new int[oberGrenze];
 
         for (int i = 0; i < arg1.length; i++) {
@@ -24,7 +24,8 @@ public class Eratosthenes {
 
         for (int i = 2; i <= grenze; i++) {
             for (int j = 2; j < oberGrenze; j++)
-                if (arg2[j] % i == 0) arg2[j] = -1;
+                if (arg2[j] == i) continue;
+                else if (arg2[j] % i == 0) arg2[j] = -1;
         }
 
         return arg2;
@@ -45,6 +46,6 @@ public class Eratosthenes {
         Scanner sc = new Scanner(System.in);
         System.out.println("Test numbers: ");
         oberGrenze = sc.nextInt();
-        showContent(sieve(fillArray(oberGrenze)));              // 3 Methoden ineinander verschachtelt
+        showContent(sieve(fillArray()));              // 3 Methoden ineinander verschachtelt.
     }
 }
